@@ -172,7 +172,7 @@ button:hover {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 180px) {
     #main-header {
         font-size: 20px; /* Further decrease font size for smaller screens */
         padding: 10px; /* Reduce header padding */
