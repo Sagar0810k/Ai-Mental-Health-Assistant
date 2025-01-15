@@ -1,0 +1,194 @@
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+/* Header container */
+#header-container {
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Header styling */
+#main-header {
+    font-size: 32px; /* Increased font size */
+    font-weight: bold;
+    color: #FFFFFF;
+    padding: 20px;
+    background-color: #0095f6;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Chat container */
+#chat-container {
+    width: 80%;
+    max-width: 600px;
+    background: #1c1c1e;
+    border: 1px solid #3a3a3c;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+/* Scrollbar styles for chat window */
+#chat-window::-webkit-scrollbar {
+    width: 10px;
+}
+
+#chat-window::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 5px;
+}
+
+#chat-window::-webkit-scrollbar-track {
+    background-color: #1c1c1e;
+}
+
+#chat-window {
+    scrollbar-color: black #1c1c1e;
+    scrollbar-width: thin;
+    height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+    border-bottom: 1px solid #3a3a3c;
+    background-color: #1c1c1e;
+    scroll-behavior: smooth;
+}
+
+/* Chat log */
+#chat-log {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Message styling */
+.user-message, .bot-message {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 14px;
+    max-width: 45%; /* Adjusted to ensure messages don't exceed half the chatbox */
+    word-wrap: break-word;
+}
+
+/* User message */
+.user-message {
+    background-color: #262626;
+    color: #e4e4e4;
+    align-self: flex-end;
+}
+
+/* Bot message */
+.bot-message {
+    background-color: #3a3a3c;
+    color: #ffffff;
+    align-self: flex-start;
+}
+
+/* Chat form */
+#chat-form {
+    display: flex;
+    padding: 10px;
+    background-color: #000000;
+}
+
+#chat-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #3a3a3c;
+    border-radius: 5px;
+    margin-right: 10px;
+    background-color: #262626;
+    color: #ffffff;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background-color: #0095f6;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #007bbd;
+}
+
+/* Mood display */
+#mood-display {
+    padding: 10px;
+    text-align: center;
+    background-color: #1c1c1e;
+    color: #ffffff;
+    font-size: 14px;
+    border-top: 1px solid #3a3a3c;
+}
+
+/* Mobile responsiveness using media queries */
+@media (max-width: 768px) {
+    #header-container {
+        width: 95%; /* Adjust header container width */
+    }
+
+    #main-header {
+        font-size: 24px; /* Decrease header font size */
+        padding: 15px; /* Reduce padding */
+    }
+
+    #chat-container {
+        width: 95%; /* Adjust chat container width */
+    }
+
+    #chat-window {
+        height: 350px; /* Adjust height for smaller screen */
+    }
+
+    .user-message, .bot-message {
+        max-width: 90%; /* Allow more width for messages on mobile */
+    }
+
+    #chat-input {
+        padding: 8px; /* Adjust padding for smaller screens */
+        font-size: 14px; /* Decrease font size */
+    }
+
+    button {
+        padding: 8px; /* Adjust button padding */
+        font-size: 14px; /* Decrease font size */
+    }
+
+    #mood-display {
+        font-size: 12px; /* Decrease font size for mood display */
+    }
+}
+
+@media (max-width: 480px) {
+    #main-header {
+        font-size: 20px; /* Further decrease font size for smaller screens */
+        padding: 10px; /* Reduce header padding */
+    }
+
+    #chat-form {
+        flex-direction: column; /* Stack input and button vertically */
+        width: 100%; /* Ensure the chat form takes full width */
+    }
+
+    #chat-input, button {
+        width: 100%; /* Make both the chat input and button full width */
+        margin-bottom: 10px; /* Add space between input and button */
+    }
+
+    button {
+        width: 100%; /* Make button full width on very small screens */
+    }
+}
