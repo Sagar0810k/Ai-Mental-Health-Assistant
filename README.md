@@ -29,4 +29,4 @@ An innovative, AI-powered web application designed to support mental health by u
 ## 🛠️ Setup & Installation
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/ai-mental-health-assistant.git
+   git clone https://github.com/Sagar0810k/ai-mental-health-assistant.git
